@@ -22,13 +22,13 @@ XResize :: Precision Window Control 🚀
 <img src="https://www.google.com/search?q=https://placehold.co/700x120/0A0F1A/00E0FF%3Ftext%3DXResize%2B::%2BEngage%26font%3Dorbitron" alt="XResize UI Preview">
 </p>
 
-:: TRANSMISSION :: 📡
+### TRANSMISSION ### 📡
 
 Stop wrestling with window borders. XResize is a lightweight, high-speed utility for the X11 desktop environment, designed to give you surgical control over your workspace. 🤖 Summon the resize interface with a keypress, input your target dimensions, and execute. Your window obeys.
 
 This tool is built for speed, precision, and minimal distraction, integrating directly with your window manager via wmctrl and xdotool.
 
-:: FEATURES :: ✨
+### FEATURES ### ✨
 
 ⚡ Hotkey Driven: Summon the resize prompt with Left-Ctrl + Space.
 
@@ -40,7 +40,7 @@ This tool is built for speed, precision, and minimal distraction, integrating di
 
 ✅ Instant Execution: Press Enter to resize or Esc to abort.
 
-⛔ :: VITAL SYSTEM REQUIREMENT :: ⛔
+⛔ ### VITAL SYSTEM REQUIREMENT ### ⛔
 
 This application interfaces directly with the X Window System.
 
@@ -52,7 +52,7 @@ This application interfaces directly with the X Window System.
 
 🐧 PRIMARY OS: Developed and tested on Ubuntu (X11 Session).
 
-:: INSTALLATION PROTOCOL :: 🛠️
+### INSTALLATION PROTOCOL ### 🛠️
 
 Execute these commands in your terminal to integrate XResize.
 
@@ -81,7 +81,7 @@ cd XResize
 
 (Don't forget to replace YOUR_USERNAME with your actual GitHub username!)
 
-:: OPERATIONAL GUIDE :: 🎮
+### OPERATIONAL GUIDE ### 🎮
 
 🟢 Launch the Service:
 Run the script from your terminal. It's best to run it as a background process.
