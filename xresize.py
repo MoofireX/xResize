@@ -111,7 +111,7 @@ class xWindow(QLineEdit):
 def get_active_window():
     result = subprocess.run(["xdotool", "getactivewindow"], capture_output=True, text=True)
     if result:
-        return hex(result.stdout.strip())
+        return result.stdout.strip()
     else:
         raise ModuleNotFoundError
 
