@@ -1,10 +1,10 @@
-# 📏 xresize ✨
+# 📏 xResize ✨
 
 A sleek and simple tool to quickly resize your active window with a keyboard shortcut. Perfect for developers, designers, and anyone who needs to manage window sizes with precision and speed! 🚀
 
 ## ⚠️ System Requirements
 
-This tool is designed specifically for **Debian-based Linux distributions** (like Ubuntu, Mint, etc.) using the **X11 display server**. It will not work on Wayland or other operating systems.
+This tool is designed specifically for **Debian-based Linux distributions** (Ubuntu, Mint, etc.) using the **X11 display server**. It will not work on Wayland or other operating systems.
 
 ## 🛠️ Installation
 
@@ -19,9 +19,13 @@ This tool is designed specifically for **Debian-based Linux distributions** (lik
 
 2.  **Install Python Libraries:**
 
-    The user interface is built with PySide6 and it uses pynput to listen for keyboard shortcuts. Install them using `pip`:
+    The user interface is built with PySide6 and it uses pynput to listen for keyboard shortcuts. Install them using `uv` or `pip`:
 
-    ```bash
+    ```
+    uv pip install PySide6 pynput
+    ```
+    or
+    ```
     pip install PySide6 pynput
     ```
 
@@ -29,7 +33,7 @@ This tool is designed specifically for **Debian-based Linux distributions** (lik
 
 1.  **Run the script:**
 
-    ```bash
+    ```
     python xresize.py
     ```
 
