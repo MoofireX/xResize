@@ -55,10 +55,10 @@ To have `xresize` available as a system-wide command and automatically start whe
 
 ### 1. Install the Package
 
-The `.deb` package is located in the `dist` directory. You can install it using `dpkg`:
+The `.deb` package is located in the `dist` directory of this repository. You can install it using `dpkg`:
 
 ```bash
-sudo dpkg -i dist/xresize.deb
+sudo dpkg -i xresize.deb
 ```
 
 If you encounter any dependency issues, run the following command to fix them:
