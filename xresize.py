@@ -73,29 +73,48 @@ class xWindow(QLineEdit):
             raise ValueError
 
     def keyPressEvent(self, event):
-    if event.key() in (Qt.Key_Return, Qt.Key_Enter):
-        try:
-            w, h = self.get_text()
-            if w and h:
-                params = f"0,0,0,{w},{h}"
-                subprocess.run(["wmctrl", "-i", "-r", self.window, "-e", params])
-        except ValueError:
-            self.setText("Invalid")
-    elif event.key() == Qt.Key_Escape:
-        self.hide()
-    else:
-        super().keyPressEvent(event)
-    
+        if event.key() in (Qt.Key_Return, Qt.Key_Enter):
+            try:
+                w, h = self.get_text()
+                if w and h:
+                    params = f"0,0,0,{w},{h}"
+                    subprocess.run(["wmctrl", "-i", "-r", self.window, "-e", params])
+                    self.hide()
+            except ValueError:
+                self.setText("Invalid")
+        elif event.key() == Qt.Key_Escape:
+            self.hide()
+        else:
+            super().keyPressEvent(event)
+
     def on_press(self,key,w=None,h=None):
         try:
             self.pressed.add(key)
             if all(k in self.pressed for k in self.trigger):
                 subprocess.Popen(["python", "xresize.py"])
 
+            elif all(k in self.pressed for k in self.execute):
+                try:
+                    w,h = self.get_text()
+                    if w and h:
+                        params = f"0,0,0,{w},{h}"
+                        subprocess.run(["wmctrl", "-i", "-r", self.window, "-e", params])
+                except ValueError:
+                    self.setText("Invalid")
+
         except AttributeError:
             self.pressed.add(key)
             if all(k in self.pressed for k in self.trigger):
                 subprocess.Popen(["python", "xresize.py"])
+
+            elif all(k in self.pressed for k in self.execute):
+                try:
+                    w,h = self.get_text()
+                    if w and h:
+                        params = f"0,0,0,{w},{h}"
+                        subprocess.run(["wmctrl", "-i", "-r", self.window, "-e", params])
+                except ValueError:
+                    self.setText("Invalid")
 
     def on_release(self,key):
 
