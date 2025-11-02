@@ -114,9 +114,3 @@ Press Esc to close the prompt without making any changes.
 
 This project is licensed under the GNU General Public License v3.0.
 See the LICENSE file for full details.
-
-<p align="center">
-<a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
-<img alt="GPLv3 License" src="https://www.google.com/search?q=https://img.shields.io/badge/License-GPLv3-blue.svg%3Fstyle%3Dfor-the-badge%26logo%3Dgnu%26logoColor%3Dwhite">
-</a>
-</p>
