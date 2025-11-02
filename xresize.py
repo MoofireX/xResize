@@ -132,11 +132,10 @@ def get_active_window():
 
 def get_active_window_geometry():
     result = subprocess.run(["xdotool", "getactivewindow", "getwindowgeometry"])
-    result = result.stdout().strip().split()
-    result = result[3]
-    x, y = result.split(",")
     if result:
-        return x,y
+        result = result.stdout().strip().split()
+        result = result[3]
+        x, y = result.split(",")
     else:
         raise ModuleNotFoundError
 
