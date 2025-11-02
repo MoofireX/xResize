@@ -27,15 +27,25 @@ This tool is designed specifically for **Debian-based Linux distributions** (lik
 
 ## 🚀 Usage
 
-1.  **Run the script:**
+For `xresize` to work, a listener process must be running in the background to detect the keyboard shortcut.
 
+1.  **Run the listener:**
+
+    To start the listener, run the following command in a terminal:
     ```bash
     python xresize.py
     ```
+    This will open a small window. Press the `Esc` key to hide it. The listener will continue to run in the background.
+
+    To keep it running even after you close the terminal, you can use `nohup`:
+    ```bash
+    nohup python xresize.py &
+    ```
+    You will still need to press `Esc` on the window that appears.
 
 2.  **Activate the resizer:**
 
-    Press `Ctrl` + `Alt` + `X` to bring up the resize input field on your active window.
+    Once the listener is running, press `Ctrl` + `Alt` + `X` to bring up the resize input field on your active window.
 
 3.  **Enter Dimensions:**
 
@@ -91,6 +101,8 @@ mkdir -p ~/.config/autostart && printf '[Desktop Entry]\nName=xResize\nComment=A
 ```
 
 After creating the file, `xresize` will start automatically the next time you log in.
+
+**Note:** When you log in, the xResize window will appear. You can press `Esc` to dismiss it and let the listener run in the background.
 
 ## 📜 License
 
