@@ -1,4 +1,4 @@
-XResize :: Precision Window Control 🚀
+### XResize :: Precision Window Control 🚀
 
 <p align="center">
 <img alt="License" src="https://www.google.com/search?q=https://img.shields.io/badge/License-GPLv3-blue.svg%3Fstyle%3Dfor-the-badge%26logo%3Dgnu%26logoColor%3Dwhite">
@@ -40,7 +40,7 @@ This tool is built for speed, precision, and minimal distraction, integrating di
 
 ✅ Instant Execution: Press Enter to resize or Esc to abort.
 
-⛔ ### VITAL SYSTEM REQUIREMENT ### ⛔
+⛔ ### VITAL SYSTEM REQUIREMENT ⛔
 
 This application interfaces directly with the X Window System.
 
@@ -60,8 +60,8 @@ Execute these commands in your terminal to integrate XResize.
 
 These tools are non-negotiable. They provide the low-level interface to the X Window System.
 
-sudo apt update
-sudo apt install wmctrl xdotool
+```sudo apt update```
+```sudo apt install wmctrl xdotool```
 
 
 2. 🐍 Python-Level Dependencies (Core & UI)
@@ -75,8 +75,8 @@ pip install PySide6 pynput
 
 Clone this repository to your local machine.
 
-git clone [https://github.com/YOUR_USERNAME/XResize.git](https://github.com/YOUR_USERNAME/XResize.git)
-cd XResize
+```git clone [https://github.com/YOUR_USERNAME/XResize.git](https://github.com/YOUR_USERNAME/XResize.git)```
+```cd XResize```
 
 
 (Don't forget to replace YOUR_USERNAME with your actual GitHub username!)
@@ -86,7 +86,7 @@ cd XResize
 🟢 Launch the Service:
 Run the script from your terminal. It's best to run it as a background process.
 
-python xresize.py &
+```python xresize.py &```
 
 
 (Tip: 💡 Add this command to your startup applications to launch XResize automatically at login.)
@@ -98,11 +98,11 @@ Left-Ctrl + Space
 🔢 Input Target Dimensions:
 The XResize prompt will appear. Type your desired resolution.
 
-1920x1080
+```1920x1080```
 
-800 600
+```800 600```
 
-3440x1440
+```3440x1440```
 
 💥 Execute Resize:
 Press Enter. The active window will instantly snap to the specified dimensions.
@@ -110,7 +110,7 @@ Press Enter. The active window will instantly snap to the specified dimensions.
 ❌ Abort Operation:
 Press Esc to close the prompt without making any changes.
 
-:: LICENSE :: 📄
+## LICENSE 📄
 
 This project is licensed under the GNU General Public License v3.0.
 See the LICENSE file for full details.
