@@ -11,7 +11,7 @@ class xWindow(QLineEdit):
     def __init__(self):
         super().__init__()
 
-        get_wmctrl_installed = subprocess.run(["pacman", "-Qi", "wmctrl"], capture_output=True)
+        get_wmctrl_installed = subprocess.run(["apt", "search", "wmctrl"], capture_output=True)
         if get_wmctrl_installed:
             wmctrl_status = get_wmctrl_installed
         else:
