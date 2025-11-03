@@ -77,7 +77,7 @@ class xWindow(QLineEdit):
             try:
                 w, h = self.get_text()
                 if w and h:
-                    params = f"0,{self.x},{self.y},{w},{h}"
+                    params = f"0,0,0,{w},{h}"
                     subprocess.run(["wmctrl", "-i", "-r", self.window, "-e", params])
                     self.hide()
             except ValueError:
@@ -97,7 +97,7 @@ class xWindow(QLineEdit):
                 try:
                     w,h = self.get_text()
                     if w and h:
-                        params = f"0,{self.x},{self.y},{w},{h}"
+                        params = f"0,0,0,{w},{h}"
                         subprocess.run(["wmctrl", "-i", "-r", self.window, "-e", params])
                 except ValueError:
                     self.setText("Invalid")
@@ -111,7 +111,7 @@ class xWindow(QLineEdit):
                 try:
                     w,h = self.get_text()
                     if w and h:
-                        params = f"0,{self.x},{self.y},{w},{h}"
+                        params = f"0,0,0,{w},{h}"
                         subprocess.run(["wmctrl", "-i", "-r", self.window, "-e", params])
                 except ValueError:
                     self.setText("Invalid")
@@ -127,15 +127,6 @@ def get_active_window():
     result = subprocess.run(["xdotool", "getactivewindow"], capture_output=True, text=True)
     if result:
         return result.stdout.strip()
-    else:
-        raise ModuleNotFoundError
-
-def get_active_window_geometry():
-    result = subprocess.run(["xdotool", "getactivewindow", "getwindowgeometry"])
-    if result:
-        result = result.stdout().strip().split()
-        result = result[3]
-        x, y = result.split(",")
     else:
         raise ModuleNotFoundError
 
@@ -168,7 +159,6 @@ if __name__ == "__main__":
 
     x = xWindow()
     x.window = get_active_window()
-    x.x, x.y = get_active_window_geometry()
     x.resize(185,50)
     x.show()
     sys.exit(xApp.exec())
