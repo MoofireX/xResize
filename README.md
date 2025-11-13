@@ -1,4 +1,4 @@
-# 📏 xResize ✨
+# 📏 xResize ✨                                                         [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MoofireX/xResize)
 
 A sleek and simple tool to quickly resize your active window with a keyboard shortcut. Perfect for developers, designers, and anyone who needs to manage window sizes with precision and speed! 🚀
 
